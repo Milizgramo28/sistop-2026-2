@@ -12,7 +12,7 @@ Su ejecución se realiza con el siguiente comando, sobre el directorio en donde 
 
 ```bash
 python3 turtle.py
-
+```
 ---
 
 ##Uso básico
@@ -52,7 +52,7 @@ Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
 turtle> whoami
 alejandro
 turtle>
-
+```
 ---
 
 ##Dificultades encontradas

@@ -6,8 +6,14 @@
 
 #define MAX_INPUT 500
 #define MAX_TOKENS 50
-// Crear el bucle de la terminal
-// Procesar la linea
+
+
+//HANDLER
+void handler(int signum){
+    if(signum == 17){
+        printf("Dentro del handler N.17 \n");
+    }
+}
 
 
 //Shell (todo el funcionamiento)
@@ -18,7 +24,7 @@ void minishell(){
     // Ciclo donde vive la terminal
     while (1){
         // (1) Imprime el prompt
-        printf("8=D --- ");
+        printf("minishell");
         fflush(stdout);
 
         // (2) leer linea usuario

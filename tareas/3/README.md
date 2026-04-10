@@ -1,7 +1,7 @@
 # Comparación de planificadores
 
-	Tarea creada: 20xx.xx.xx
-    Entrega: 20xx.xx.xx
+	Tarea creada: 2026.04.09
+    Entrega: 2026.04.16
 
 Revisamos en clase los mecanismos de planificación de procesos,
 comenzando con los más sencillos (FCFS/FIFO, RR, SPN), y avanzando

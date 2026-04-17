@@ -5,6 +5,8 @@
 #include <queue>
 #include <iomanip>
 #include <string>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -175,6 +177,7 @@ void SPN(vector<Proceso> v){
 }
 
 int main(){
+    srand(time(NULL));
     vector<vector<Proceso>> pruebas;
     int num_pruebas=3;
     //Pruebas ejemplo dadas por el profesor

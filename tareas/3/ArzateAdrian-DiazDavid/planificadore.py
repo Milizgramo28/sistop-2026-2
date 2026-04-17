@@ -253,14 +253,17 @@ def imprimir_vista(numero_ronda, procesos_originales, resultados):
         print(f"  {esquema}")
 
 
+def main():
+    for i in range(4):
+        procesos = proceso_aleatorio(5)
 
-procesos_prueba = proceso_aleatorio(5)
+        res_fcfs = FCFS(copy.deepcopy(procesos))
+        res_rr   = RR(copy.deepcopy(procesos), 1) 
+        res_spn  = SPN(copy.deepcopy(procesos))
+        res_fb   = FB(copy.deepcopy(procesos), 3, 1)
 
-res_fcfs = FCFS(copy.deepcopy(procesos_prueba))
-res_rr   = RR(copy.deepcopy(procesos_prueba), 1) 
-res_spn  = SPN(copy.deepcopy(procesos_prueba))
-res_fb   = FB(copy.deepcopy(procesos_prueba), 3, 1)
+        lista_resultados = [res_fcfs, res_rr, res_spn, res_fb]
 
-lista_resultados = [res_fcfs, res_rr, res_spn, res_fb]
+        imprimir_vista(i + 1, procesos, lista_resultados)
 
-imprimir_vista(1, procesos_prueba, lista_resultados)
+main()

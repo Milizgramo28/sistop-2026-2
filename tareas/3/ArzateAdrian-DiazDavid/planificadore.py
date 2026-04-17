@@ -13,8 +13,19 @@ class Proceso:
     tiempo_retorno: int = 0
     tiempo_espera: int = 0
 
-    def __pos_init__(self):
+    def __post_init__(self):
         if self.tiempo_restante == 0:
             self.tiempo_restante = self.tiempo_servicio
 
-print( Proceso('A', 0, 5))
+def proceso_aleatorio(num_procesos):
+    procesos = []
+    for i in range(num_procesos):
+        nombre = chr(65 + i)
+
+        tiempo_llegada = random.randint(0,10)
+        tiempo_servicio = random.randint(1,5)
+        procesos.append(Proceso(nombre, tiempo_llegada, tiempo_servicio))
+    procesos.sort(key=lambda p: p.tiempo_llegada)
+    return procesos
+
+print(proceso_aleatorio(5))
